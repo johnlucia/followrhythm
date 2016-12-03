@@ -4,23 +4,6 @@
   <head>
     <%= render "/refinery/head" %>
   </head>
-  <!--
-  <body id="<%= canonical_id @page %>">
-    <%= site_bar -%>
-    <div id="page_container">
-      <header id="header">
-        <%#= render "/refinery/header" -%>
-      </header>
-      <section id="page">
-        <%#= yield %>
-      </section>
-      <footer>
-        <%#= render "/refinery/footer" -%>
-      </footer>
-    </div>
-    <%#= render "/refinery/javascripts" %>
-  </body> 
-  -->
   <body id="<%= canonical_id @page %>">
     <%= render "/refinery/header" -%>
     <%= yield %>
