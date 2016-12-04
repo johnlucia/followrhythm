@@ -1,18 +1,4 @@
-<%# = render '/refinery/content_page' %>
-
-<div class="section section-header">
-  <div class="parallax filter">
-    <div class="image" style="background-image: url('/assets/img/banner-4.jpg')"></div>
-    <div class="container">
-      <div class="content">
-        <div class="title-area">
-          <%= raw @page.content_for(:banner) %>
-          <div class="separator line-separator">♦</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render '/refinery/big_header_image' %>
 
 <div class="section">
   <div class="container">
@@ -51,11 +37,7 @@
   </div>
 </div>
 
-<div class="section">
-  <div class="parallax">
-    <div class="image" style="background-image: url('/assets/img/banner-2.jpg')"></div>
-  </div>
-</div>
+<%= render '/refinery/big_parallax_image', locals: {image_index: 1} %>
 
 <div class="section section-info section-info-presentation">
   <div class="container">
@@ -83,14 +65,12 @@
           </div>
           <div class="text">
             <%= raw @page.content_for(:side_bottom) %>
-            <h3 class="title-info">Built with sections</h3>
-            <p class="text-description text-gray">Want to prototype very fast? <b>Gaia Bootstrap Template</b> is made with sections that can be integrated very easy and look perfect together.</p>
           </div>
         </div>
       </div>
       <div class="col-sm-6">
         <div class="image-container">
-          <img src="/assets/img/reaching-1.jpg" alt="" />
+          <%= image_tag @page.images[2].url, alt: @page.images[2].image_alt %>
         </div>
       </div>
     </div>
