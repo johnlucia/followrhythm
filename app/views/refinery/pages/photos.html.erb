@@ -19,12 +19,11 @@
         <div class="col-md-4">
           <h3 class="text-center"><%= img.image_title %></h3>
           <div class="card card-blog">
-            <%= link_to image_tag(img.thumbnail().url), img.url, class: "fancybox header", target: "_blank" %>
+            <%= link_to image_tag(img.thumbnail().url), img.url, class: "fancybox header", rel: "group" %>
           </div>
         </div>
       <% end %>
     </div>
   </div>
 </div>
-
            
