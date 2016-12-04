@@ -12,4 +12,6 @@
 //
 //= require jquery_ujs
 //= require fancybox
+//= require jquery.unveil
+//= require global_scripts
 //= require_tree .

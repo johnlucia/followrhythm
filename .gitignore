@@ -92,3 +92,5 @@ capybara-*html
 vendor/extensions/**/spec/dummy
 
 /.env
+
+/.byebug_history
