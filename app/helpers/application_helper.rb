@@ -5,7 +5,7 @@ module ApplicationHelper
       next if i == 0
       start_of_row = (i % 3 == 1)
       end_of_row = (i % 3 == 0)
-      last_image = (i == images.length - 2)
+      last_image = (i == images.length - 1)
       markup << "<div class='row'>" if start_of_row
       markup << "<div class='col-md-4'>"
       markup << "  <h3 class='text-center'>#{img.image_title}</h3>"

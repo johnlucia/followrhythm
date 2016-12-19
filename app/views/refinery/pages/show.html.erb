@@ -5,10 +5,18 @@
     <div class="row">
       <div class="col-md-7">
         <%= raw @page.content_for(:body) %>
+        <div class="separator separator-danger">✻</div>
       </div>
+
       <div class="col-md-5 side-content">
         <%= raw @page.content_for(:side_body) %>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="section section-cards section-gray lazy-images">
+  <div class="container">
+    <%= photo_cards_markup(@page.images) %>
   </div>
 </div>
