@@ -1,0 +1,21 @@
+<%= render '/refinery/big_header_image' %>
+
+<div class="section" id="firstSection">
+  <div class="container">
+    <div class="row">
+      <div class="title-area">
+        <%= raw @page.content_for(:intro) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="title-area fluid-width-videos">
+        <%= raw @page.content_for(:body) %>
+      </div>
+    </div>
+  </div>
+</div>
