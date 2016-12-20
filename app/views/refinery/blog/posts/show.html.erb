@@ -8,9 +8,22 @@
 
 <%= render '/refinery/blog/shared/body_content_right' %>
 
-<%= render "/refinery/content_page", :remove_automatic_sections => true %>
+<%= render '/refinery/big_header_image' %>
 
-<% content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend') %>
+<div class="section" id="firstSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <%= render "/refinery/content_page", :hide_sections => [:body_content_title, :side_body] %>
+      </div>
+
+      <div class="col-md-5 side-content">
+        <%= yield :side_body %>
+      </div>
+    </div>
+  </div>
+</div>
+
 <% content_for :javascripts do %>
   <%# enable AJAX'd post nav at your own risk until html5 history API implemented. %>
   <%#= javascript_include_tag('refinery/blog/frontend') %>

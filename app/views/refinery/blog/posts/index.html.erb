@@ -14,7 +14,21 @@
 <% content_for :side_body_prepend do -%>
   <%= raw @page.content_for(Refinery::Pages.default_parts.second[:slug].to_sym) %>
 <% end if Refinery::Pages.default_parts.many? -%>
+
 <%= render '/refinery/blog/shared/body_content_right' %>
 
-<%= render "/refinery/content_page" %>
-<% content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend') %>
+<%= render '/refinery/big_header_image' %>
+
+<div class="section" id="firstSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <%= render "/refinery/content_page", :hide_sections => [:body_content_title, :side_body] %>
+      </div>
+
+      <div class="col-md-5">
+        <%= yield :side_body %>
+      </div>
+    </div>
+  </div>
+</div>
