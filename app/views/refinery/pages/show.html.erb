@@ -17,6 +17,6 @@
 
 <div class="section section-cards section-gray lazy-images">
   <div class="container">
-    <%= photo_cards_markup(@page.images) %>
+    <%= photo_cards_markup(@page.images) if @page.images.count > 1 %>
   </div>
 </div>

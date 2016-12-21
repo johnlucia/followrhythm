@@ -9,3 +9,9 @@ $ ->
     $('html, body').animate({
       scrollTop: $(scroll_target).offset().top - 50
     }, 1500)
+
+    divs = $('.article-preview')
+    i = 0
+    while i < divs.length
+      divs.slice(i, i + 2).wrapAll "<div class='row'></div>"
+      i += 2
