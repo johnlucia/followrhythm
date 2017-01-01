@@ -56,7 +56,7 @@
 
         <% if (categories = post.categories.translated).any? %>
           <h6 class="card-category text-warning">
-            <%= t('filled_in', :scope => 'refinery.blog.posts.show') %>
+            <%# = t('filled_in', :scope => 'refinery.blog.posts.show') %>
             <%=raw categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %>
           </h6>
         <% end %>
