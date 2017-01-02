@@ -23,4 +23,10 @@ module ApplicationHelper
     end
     markup.join("").html_safe
   end
+
+  def pretty_date_for_blog_post(post)
+    date = post.published_at
+    day_number = ActiveSupport::Inflector.ordinalize(date.day)
+    date.strftime("%B #{day_number}")
+  end
 end
