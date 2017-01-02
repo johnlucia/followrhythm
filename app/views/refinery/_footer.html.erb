@@ -1,7 +1,39 @@
 <div class="container">
   <div class="row">
+    <div class="col-md-3 col-md-offset-1 col-sm-6 hidden-xs">
+      <div class="info">
+        <h5 class="title">www.FollowRhythm.com</h5>
+        <hr />
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/photos">Photos</a></li>
+            <li><a href="/videos">Videos</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="col-md-4 col-md-offset-1 col-sm-6 hidden-xs">
+      <h5 class="title">The Latest</h5>
+      <%= render '/refinery/footer_blog_summary' %>
+    </div>
+    <div class="col-md-3 col-sm-63">
+      <span class='st_pinterest_large pull-right' displayText='Pinterest'></span>
+      <span class='st_linkedin_large pull-right' displayText='LinkedIn'></span>
+      <span class='st_twitter_large pull-right' displayText='Tweet'></span>
+      <span class='st_facebook_large pull-right' displayText='Facebook'></span>
+    </div>
+  </div>
+  <div class="row">
+    <hr />
     <div class="copyright">
       © <script> document.write(new Date().getFullYear()) </script> FollowRhythm
     </div>
   </div>
 </div>
+
+
+<% post=Refinery::Blog::Post.last %>
+<%= refinery.blog_post_path(post) %>

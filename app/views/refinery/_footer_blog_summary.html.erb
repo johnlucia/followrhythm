@@ -1,0 +1,10 @@
+<% latest_posts=Refinery::Blog::Post.last(2) %>
+
+<% latest_posts.each do |post| %>
+  <hr />
+  <a href="<%= refinery.blog_post_path(post) %>">
+    <strong><%= post.title %></strong>
+    <br />
+    <%= strip_tags(post.custom_teaser) %>
+  </a>
+<% end %>
