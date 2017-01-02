@@ -1,3 +1,4 @@
+// Links in the body
 p a{
   font-weight: bold;
 } 
@@ -8,18 +9,26 @@ h3 a {
   &:hover { text-decoration: underline; }
 }
 
+// Images in the body
 .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-12{
   img{ max-width: 100%; }
 }
 
+// Footer Stuff
+.footer-blog-summary,
+.footer-nav{
+  padding-bottom: 1em;
+}
+
+@media screen and (max-width: 767px) {
+  .social-links{ text-align:center; }
+}
+
+// Etc.
 .fluid-width-videos{ 
   h2{ margin-top:2em; }
 }
 
 #blog_posts{
 
-}
-
-.footer-blog-summary{
-  padding-bottom: 1em;
 }
