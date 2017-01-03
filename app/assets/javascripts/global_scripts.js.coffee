@@ -15,3 +15,9 @@ $ ->
     while i < divs.length
       divs.slice(i, i + 2).wrapAll "<div class='row'></div>"
       i += 2
+
+  if $('.google-map').length
+    mapElement = $('.google-map')[0]
+    lat = 48.495840
+    lng = -122.608431
+    gaia.initGoogleMaps(mapElement, lat, lng)
