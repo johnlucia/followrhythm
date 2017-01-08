@@ -20,6 +20,17 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
         xml.lastmod page.updated_at.to_date
       end if page_url.present? and page.show_in_menu?
     end
+
+    # posts
+    ::Refinery::Blog::Post.where(draft: false).each do |post|
+      post_url = refinery.blog_post_url(post)
+
+      xml.url do
+        xml.loc post_url
+        xml.lastmod post.updated_at.to_date
+        xml.priority '1'
+      end
+    end
   end
 
 end
