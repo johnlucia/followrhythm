@@ -24,15 +24,8 @@ h3 a {
   .social-links{ text-align:center; }
 }
 
-// Etc.
-.fluid-width-videos{ 
-  h2{ margin-top:2em; }
-}
 
-#blog_posts{
-
-}
-
+// Form Stuff
 .form-group{
   label{ text-align: left; }
 }
@@ -43,7 +36,18 @@ h3 a {
   li{ list-style-type: none; }
 }
 
+
+// Blog Stuff
+#blog_posts{
+
+}
+
 #comments{
   .separator{ margin: 1em 0; }
   .avatar{ margin-bottom: 1em; }
+}
+
+// Etc.
+.fluid-width-videos{ 
+  h2{ margin-top:2em; }
 }
