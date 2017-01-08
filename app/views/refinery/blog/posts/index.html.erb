@@ -22,11 +22,11 @@
 <div class="section" id="firstSection">
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-md-8">
         <%= render "/refinery/content_page", :hide_sections => [:body_content_title, :side_body, :banner] %>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-3 col-md-offset-1">
         <%= yield :side_body %>
       </div>
     </div>

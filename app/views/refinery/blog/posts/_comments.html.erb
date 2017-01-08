@@ -4,6 +4,8 @@
     <%= render :partial => "comment", :collection => comments %>
   <% end %>
 
+  <div class="separator separator-danger">✻</div>
+
   <% if Refinery::Blog::Post.comments_allowed? %>
 
     <% flash.each do |key, value| %>
