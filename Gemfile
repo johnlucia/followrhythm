@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 gem 'refinerycms-page-images', '~> 3.0.0', github: "refinery/refinerycms-page-images", branch: "master"
+gem 'refinerycms-inquiries', '~> 3.0.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
