@@ -60,10 +60,21 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
 
+
+
+  config.action_mailer.delivery_method = :sendmail
+  # Defaults to:
+  # config.action_mailer.sendmail_settings = {
+  #   location: '/usr/sbin/sendmail',
+  #   arguments: '-i'
+  # }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = {from: 'no-reply@followrhythm.herokuapp.com'}
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   if config.respond_to?(:action_mailer)
-    config.action_mailer.raise_delivery_errors = true
+    # config.action_mailer.raise_delivery_errors = true
   end
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
