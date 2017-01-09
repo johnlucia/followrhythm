@@ -71,7 +71,7 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_options = {from: 'no-reply@followrhythm.herokuapp.com'}
-  Rails.application.routes.default_url_options[:host] = 'followrhythm.com'
+  config.action_mailer.default_url_options = { :host => 'followrhythm.heroku.com' }
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   if config.respond_to?(:action_mailer)
