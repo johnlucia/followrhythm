@@ -1,6 +1,6 @@
 <% content_for :body do %>
   <%= raw @page.content_for(Refinery::Pages.default_parts.first[:slug].to_sym) if Refinery::Pages.default_parts.any? %>
-
+  <div class="separator separator-danger">✻</div>
   <div class='inquiries'>
     <%= render "/refinery/inquiries/inquiries/form", inquiry: @inquiry %>
   </div>
@@ -17,3 +17,23 @@
     </div>
   </div>
 </div>
+
+<!-- <div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="title-area">
+        <div class="separator separator-danger">✻</div>
+        <%#= raw @page.content_for(:side_body) %>
+        <div class="separator separator-danger">✻</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-contact-us">
+  <div class="contact-container">
+    <div class="map">
+      <div class="google-map big-map"></div>
+    </div>
+  </div>
+</div> -->
