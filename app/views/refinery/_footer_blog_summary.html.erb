@@ -1,4 +1,4 @@
-<% latest_posts=Refinery::Blog::Post.last(2).reverse %>
+<% latest_posts=Refinery::Blog::Post.order('published_at DESC').last(2) %>
 
 <% latest_posts.each do |post| %>
   <hr />
@@ -6,7 +6,7 @@
     <strong><%= post.title %></strong>
     <br />
     <%= pretty_date_for_blog_post(post) %>
-    <br />
-    <%= strip_tags(post.custom_teaser) %>
+    <!-- <br /> -->
+    <%#= strip_tags(post.custom_teaser) %>
   </a>
 <% end %>
