@@ -11,7 +11,7 @@ module ApplicationHelper
       markup << "  <h3 class='text-center'>#{img.image_title}</h3>"
       markup << "  <div class='card card-blog'>"
 
-      markup << link_to( image_tag("/assets/img/placeholder.png", data: {src: img.thumbnail().url}),
+      markup << link_to( image_tag("/assets/img/placeholder.png", alt: img.image_alt, data: {src: img.thumbnail().url}),
                          img.url,
                          class: "fancybox header",
                          rel: "group",
