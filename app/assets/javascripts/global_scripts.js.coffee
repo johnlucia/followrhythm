@@ -1,3 +1,6 @@
+scrollToMap = () ->
+  $('html, body').animate({ scrollTop: $("#predict-wind-map").offset().top - 75 }, 2000)
+
 $ -> 
   $(".fancybox").fancybox()
   $(".lazy-images img").unveil()
@@ -21,3 +24,6 @@ $ ->
     lat = 48.495840
     lng = -122.608431
     gaia.initGoogleMaps(mapElement, lat, lng)
+
+  if $("#predict-wind-map").length
+    window.setTimeout( scrollToMap, 2000 )
