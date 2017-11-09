@@ -1,4 +1,4 @@
-<% latest_posts=Refinery::Blog::Post.order('published_at DESC').last(2) %>
+<% latest_posts=Refinery::Blog::Post.order('published_at DESC').first(2) %>
 
 <% latest_posts.each do |post| %>
   <hr />
