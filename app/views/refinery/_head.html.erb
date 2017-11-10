@@ -6,7 +6,7 @@
 <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
 <%= yield :meta %>
 
-
+<%= open_graph_markup %>
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 <link href="/assets/css/bootstrap.css" rel="stylesheet" />

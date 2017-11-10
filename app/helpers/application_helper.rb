@@ -29,4 +29,16 @@ module ApplicationHelper
     day_number = ActiveSupport::Inflector.ordinalize(date.day)
     date.strftime("%B #{day_number}")
   end
+
+  def open_graph_markup
+    begin
+      markup = %Q( <meta property='og:title' content="#{browser_title}" />
+                   <meta property='og:type' content='article' />
+                   <meta property='og:url' content='http://www.followrhythm.com#{@page.url}' />
+                   <meta property='og:image' content='http://www.followrhythm.com#{@page.images.first.url}' /> )
+    rescue
+      markup = ""
+    end
+    markup.html_safe
+  end
 end
