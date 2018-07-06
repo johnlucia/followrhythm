@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.3.1"
 
-gem 'rails', '4.2.6'
+gem 'rails', '~> 4.2.7'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -11,9 +11,11 @@ gem 'fancybox2-rails'
 # gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'mime-types'
+
 
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
-gem 'refinerycms-page-images', '~> 3.0.0', github: "refinery/refinerycms-page-images", branch: "master"
+gem 'refinerycms-page-images', '~> 3.0.0'
 gem 'refinerycms-inquiries', '~> 3.0.0'
 
 group :development, :test do
