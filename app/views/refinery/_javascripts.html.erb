@@ -3,7 +3,9 @@
 
 <script type="text/javascript" src="/assets/js/modernizr.js"></script>
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWpCHgdoxnqTZreNdtFdYbHPRvcheQAfI"></script>
+<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWpCHgdoxnqTZreNdtFdYbHPRvcheQAfI"></script> -->
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initRouteMap"></script>
 
 <script type="text/javascript" src="/assets/js/gaia.js"></script>
 

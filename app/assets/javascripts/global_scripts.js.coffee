@@ -1,5 +1,5 @@
 scrollToMap = () ->
-  $('html, body').animate({ scrollTop: $("#predict-wind-map").offset().top - 75 }, 2000)
+  $('html, body').animate({ scrollTop: $("#route-map").offset().top - 75 }, 2000)
 
 $ -> 
   $(".fancybox").fancybox()
@@ -19,11 +19,5 @@ $ ->
       divs.slice(i, i + 2).wrapAll "<div class='row'></div>"
       i += 2
 
-  if $('.google-map').length
-    mapElement = $('.google-map')[0]
-    lat = 48.495840
-    lng = -122.608431
-    gaia.initGoogleMaps(mapElement, lat, lng)
-
-  if $("#predict-wind-map").length
+  if $("#route-map").length
     window.setTimeout( scrollToMap, 2000 )
