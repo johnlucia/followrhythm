@@ -51,5 +51,6 @@ group :production do
   gem 'dragonfly-s3_data_store'
   gem 'rails_12factor'
   gem 'puma'
+  gem 'newrelic_rpm'
 end
 
