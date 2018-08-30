@@ -53,4 +53,3 @@ group :production do
   gem 'puma'
   gem 'newrelic_rpm'
 end
-
