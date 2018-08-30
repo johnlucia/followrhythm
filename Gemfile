@@ -12,6 +12,8 @@ gem 'fancybox2-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mime-types'
+gem 'mail'
+gem 'geo_coord'
 
 
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'

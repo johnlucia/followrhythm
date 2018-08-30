@@ -126,6 +126,7 @@ GEM
     formatador (0.2.5)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
+    geo_coord (0.1.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     globalize (5.0.1)
@@ -322,8 +323,10 @@ DEPENDENCIES
   dotenv-rails
   dragonfly-s3_data_store
   fancybox2-rails
+  geo_coord
   jbuilder (~> 2.0)
   jquery-rails
+  mail
   mime-types
   pg (~> 0.15)
   puma

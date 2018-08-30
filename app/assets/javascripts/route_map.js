@@ -4,7 +4,8 @@ function initRouteMap() {
 
   var extractCoordinates = function(item) { return item.p; }
 
-  $.getJSON('/san-juans-to-mexico-route.json', function(data) {
+  // $.getJSON('/san-juans-to-mexico-route.json', function(data) {
+  $.getJSON('http://localhost:3000/boats/1/positions.json', function(data) {
     route1 = data.route.reverse().map(extractCoordinates); 
 
     var map = new google.maps.Map(document.getElementById('route-map'), {
