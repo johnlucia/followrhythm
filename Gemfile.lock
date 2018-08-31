@@ -327,7 +327,6 @@ DEPENDENCIES
   geo_coord
   jbuilder (~> 2.0)
   jquery-rails
-  mail
   mime-types
   newrelic_rpm
   pg (~> 0.15)
