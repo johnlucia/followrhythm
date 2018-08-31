@@ -4,9 +4,8 @@ function initRouteMap() {
 
   var extractCoordinates = function(item) { return item.p; }
 
-  // $.getJSON('/san-juans-to-mexico-route.json', function(data) {
-  $.getJSON('http://localhost:3000/boats/1/positions.json', function(data) {
-    route1 = data.route.reverse().map(extractCoordinates); 
+  $.getJSON('https://voyagetracker.herokuapp.com/boats/1/positions.json', function(data) {
+    route1 = data.route.map(extractCoordinates); 
 
     var map = new google.maps.Map(document.getElementById('route-map'), {
       zoom: 6,
@@ -25,18 +24,27 @@ function initRouteMap() {
     var lastPositionUpdate = new google.maps.Marker({
       position: route1[0],
       map: map,
-      title: 'Last Known Position'
+      title: 'Latitude: ' + route1[0].lat + ', Longitude: ' + route1[0].lng + ' ...Click for more info'
     });
 
-    // var contentString = "<h3>This is where Rhythm is now!</h3>"
+    var date = new Date(data.route[0].t * 1000);
+    var hours = date.getHours();
+    var minutes = "0" + date.getMinutes();
+    var dateTimeString = date + ' at ' + hours + ':' + minutes.substr(-2);
 
-    // var infowindow = new google.maps.InfoWindow({
-    //   content: contentString
-    // });
+    var contentString = '<p><strong>Position</strong></p>' +
+                        '<p>Latitude: ' + route1[0].lat + ', Longitude: ' + route1[0].lng + '</p>' +
+                        '<p><strong>Last Report</strong></p>' +
+                        '<p>' + dateTimeString + '</p>';
 
-    // lastPositionUpdate.addListener('click', function() {
-    //   infowindow.open(map, lastPositionUpdate);
-    // });
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    lastPositionUpdate.addListener('click', function() {
+      infowindow.open(map, lastPositionUpdate);
+    });
 
     chartPlot.setMap(map);
   });
