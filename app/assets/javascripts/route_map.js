@@ -4,7 +4,8 @@ function initRouteMap() {
 
   var extractCoordinates = function(item) { return item.p; }
 
-  $.getJSON('https://voyagetracker.herokuapp.com/boats/1/positions.json', function(data) {
+  // $.getJSON('https://voyagetracker.herokuapp.com/boats/1/positions.json', function(data) {
+  $.getJSON('http://localhost:3001/boats/2/positions.json', function(data) {
     route1 = data.route.map(extractCoordinates); 
 
     var map = new google.maps.Map(document.getElementById('route-map'), {
@@ -36,6 +37,8 @@ function initRouteMap() {
                         '<p>Latitude: ' + route1[0].lat + ', Longitude: ' + route1[0].lng + '</p>' +
                         '<p><strong>Last Report</strong></p>' +
                         '<p>' + dateTimeString + '</p>';
+
+    $('#position-report-details').html(contentString);
 
 
     var infowindow = new google.maps.InfoWindow({
