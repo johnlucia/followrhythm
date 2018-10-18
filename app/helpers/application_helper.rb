@@ -32,7 +32,12 @@ module ApplicationHelper
 
   def open_graph_markup
     begin
-      image_url = @page.images.first.best_url
+      if @post && @post.images.first
+        image_url = @post.images.first.best_url
+      else
+        image_url = @page.images.first.best_url
+      end
+
       image_url = "http://www.followrhythm.com#{image_url}" if image_url.first == '/'
 
       markup = %Q( <meta property='og:title' content="#{browser_title}" />
