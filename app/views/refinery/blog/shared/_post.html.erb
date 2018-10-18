@@ -47,7 +47,7 @@
   <div class="col-md-6 article-preview">
     <div class="card card-blog">
       <a href="<%= refinery.blog_post_path(post) %>" class="header">
-        <%= image_tag(post.images.first.url, class: "image-header") if post.images.any? %>
+        <%= image_tag(post.images.first.best_url, class: "image-header") if post.images.any? %>
       </a>
       <div class="content">
         <h6 class="card-date"><%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(post.published_at.to_date, :format => :short)) %></h6>
