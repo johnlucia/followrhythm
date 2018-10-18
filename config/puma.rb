@@ -18,7 +18,5 @@ before_fork do
   require 'puma_worker_killer'
 
   # Restart on a set time interval
-  # PumaWorkerKiller.enable_rolling_restart(2 * 3600) # 2 hours in seconds
-  # OR, restart at percantage 
-  PumaWorkerKiller.start
+  PumaWorkerKiller.enable_rolling_restart(2 * 3600) # 2 hours in seconds
 end
