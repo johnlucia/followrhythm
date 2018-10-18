@@ -4,7 +4,9 @@ namespace :image_utilities do
     auth = {
       cloud_name: ENV['CLOUDINARY_CLOUD_NAME'],
       api_key:    ENV['CLOUDINARY_API_KEY'],
-      api_secret: ENV['CLOUDINARY_SECRET']
+      api_secret: ENV['CLOUDINARY_SECRET'],
+      use_filename: true,
+      folder: 'rhythm'
     }
 
     local_images = Refinery::Image.where(external_url: nil).limit(10)
