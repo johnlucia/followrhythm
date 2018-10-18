@@ -37,7 +37,7 @@ module ApplicationHelper
 
       markup = %Q( <meta property='og:title' content="#{browser_title}" />
                    <meta property='og:type' content='article' />
-                   <meta property='og:url' content='http://www.followrhythm.com#{@page.url}' />
+                   <meta property='og:url' content='#{request.original_url}' />
                    <meta property='og:image' content='#{image_url}' /> )
     rescue
       markup = ""
