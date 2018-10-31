@@ -11,7 +11,7 @@ module ApplicationHelper
       markup << "  <h3 class='text-center'>#{img.image_title}</h3>"
       markup << "  <div class='card card-blog'>"
       # data: {src: img.best_url} should invoke some cloudinary thumbnail transformation
-      markup << link_to( image_tag("/assets/img/placeholder.png", alt: img.image_alt, data: {src: img.best_url}),
+      markup << link_to( image_tag("/assets/img/placeholder.png", alt: img.image_alt, data: {src: img.best_small_url}),
                          img.best_url,
                          class: "fancybox header",
                          rel: "group",
