@@ -18,8 +18,6 @@ class CloudinaryUploader
     image_path = @image.url
     image_url = "http://www.followrhythm.com#{image_path}"
     puts "\n\n\n\n\n\n\n\n\n\n\n\n\n #{image_url} \n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-    image_url = "https://i.kinja-img.com/gawker-media/image/upload/s--VRgSmL1i--/c_scale,f_auto,fl_progressive,q_80,w_800/wsvqhc42bnocrsetkizw.jpg"
-    
     response = Cloudinary::Uploader.upload(image_url, auth)
     cloudinary_base_url = response['url']
     transformation_url = cloudinary_base_url.gsub('/upload/','/upload/q_auto,f_auto,fl_lossy/')
