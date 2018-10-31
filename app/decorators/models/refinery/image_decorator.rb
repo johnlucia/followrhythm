@@ -1,4 +1,7 @@
 Refinery::Image.class_eval do
+
+  before_create :upload_to_cloudinary
+
   def best_url
     external_url || url
   end
@@ -17,5 +20,9 @@ Refinery::Image.class_eval do
     else
       url
     end
+  end
+
+  def upload_to_cloudinary
+    self.external_url = CloudinaryUploader.new(self).new_cloudinary_url
   end
 end
