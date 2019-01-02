@@ -5,7 +5,7 @@ function initRouteMap() {
   var extractCoordinates = function(item) { return item.p; }
 
   $.getJSON('https://voyagetracker.herokuapp.com/boats/1/positions.json', function(data) {
-  // $.getJSON('http://localhost:3001/boats/2/positions.json', function(data) {
+  // $.getJSON('http://localhost:3001/boats/1/positions.json', function(data) {
     route1 = data.route.map(extractCoordinates); 
 
     var map = new google.maps.Map(document.getElementById('route-map'), {
@@ -28,18 +28,21 @@ function initRouteMap() {
       title: 'Latitude: ' + route1[0].lat + ', Longitude: ' + route1[0].lng + ' ...Click for more info'
     });
 
-    var date = new Date(data.route[0].t * 1000);
-    var hours = date.getHours();
-    var minutes = "0" + date.getMinutes();
-    var dateTimeString = date + ' at ' + hours + ':' + minutes.substr(-2);
+    var date = data.meta.last_update;
+    var currentLat = data.meta.latitude;
+    var currentLon = data.meta.longitude;
+    var currentSpeed = data.meta.speed_in_knots;
+    var currentHeading = data.meta.heading;
 
-    var contentString = '<p><strong>Position</strong></p>' +
-                        '<p>Latitude: ' + route1[0].lat + ', Longitude: ' + route1[0].lng + '</p>' +
-                        '<p><strong>Last Report</strong></p>' +
-                        '<p>' + dateTimeString + '</p>';
+    var contentString = '<table class="table"><tbody>' +
+                        '<tr><td>Time:</td><td>' + date + '</td></tr>' +
+                        '<tr><td>Speed:</td><td>' + currentSpeed + ' knots</td></tr>' +
+                        '<tr><td>Heading:</td><td>' + currentHeading + ' Deg.</td></tr>' +
+                        '<tr><td>Latitude:</td><td>' + currentLat + '</td></tr>' +
+                        '<tr><td>Longitude:</td><td>' + currentLon + ' </td></tr>' +
+                        '</tbody></table>'
 
     $('#position-report-details').html(contentString);
-
 
     var infowindow = new google.maps.InfoWindow({
       content: contentString
