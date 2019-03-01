@@ -43,7 +43,8 @@ gem 'refinerycms', '~> 3.0'
 
 # Optionally, specify additional Refinery CMS Extensions here:
 gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.1']
-gem 'rhythm-refinerycms-wymeditor', :git => 'git://github.com/johnlucia/rhythm-refinerycms-wymeditor.git'
+# gem 'refinerycms-wymeditor', path: '/Users/johnlucia/refinerycms-wymeditor-1.1.0'
+gem 'refinerycms-wymeditor', :git => 'git://github.com/johnlucia/rhythm-refinerycms-wymeditor.git'
 gem 'refinerycms-authentication-devise', '~> 1.0'
 #  gem 'refinerycms-blog', ['~> 3.0', '>= 3.0.0']
 #  gem 'refinerycms-inquiries', ['~> 3.0', '>= 3.0.0']

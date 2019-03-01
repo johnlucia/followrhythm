@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/johnlucia/rhythm-refinerycms-wymeditor.git
-  revision: e25bf707a9eac1687884c5a1f2f3a80b70493e03
+  revision: 483e7813163fb8006ec55794df91fbc9491bccb3
   specs:
-    rhythm-refinerycms-wymeditor (1.1.0)
+    refinerycms-wymeditor (1.1.0)
       refinerycms-core (>= 3.0.0, < 5.0)
 
 GIT
@@ -379,7 +379,7 @@ DEPENDENCIES
   refinerycms-blog!
   refinerycms-inquiries (~> 3.0.0)
   refinerycms-page-images (~> 3.0.0)
-  rhythm-refinerycms-wymeditor!
+  refinerycms-wymeditor!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
