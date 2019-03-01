@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.3.1"
 
-gem 'rails', '~> 4.2.7'
+gem 'rails', '~> 4.2.11'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -43,7 +43,7 @@ gem 'refinerycms', '~> 3.0'
 
 # Optionally, specify additional Refinery CMS Extensions here:
 gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.1']
-gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
+gem 'rhythm-refinerycms-wymeditor', :git => 'git://github.com/johnlucia/rhythm-refinerycms-wymeditor.git'
 gem 'refinerycms-authentication-devise', '~> 1.0'
 #  gem 'refinerycms-blog', ['~> 3.0', '>= 3.0.0']
 #  gem 'refinerycms-inquiries', ['~> 3.0', '>= 3.0.0']
