@@ -11,7 +11,8 @@ function initRouteMap() {
     var map = new google.maps.Map(document.getElementById('route-map'), {
       zoom: 6,
       center: route1[0],
-      mapTypeId: 'terrain'
+      mapTypeId: 'terrain',
+      scaleControl: true
     });
 
     var chartPlot = new google.maps.Polyline({
