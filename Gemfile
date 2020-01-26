@@ -16,6 +16,7 @@ gem 'geo_coord'
 
 gem 'cloudinary'
 
+gem 'devise', git: 'https://github.com/plataformatec/devise' , branch: '3-stable'
 
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 gem 'refinerycms-page-images', '~> 3.0.0'

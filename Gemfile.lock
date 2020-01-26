@@ -6,6 +6,19 @@ GIT
       refinerycms-core (>= 3.0.0, < 5.0)
 
 GIT
+  remote: https://github.com/plataformatec/devise
+  revision: fb48336709bc1a29ff15b7170ed7b33906c66888
+  branch: 3-stable
+  specs:
+    devise (3.5.10)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+
+GIT
   remote: https://github.com/refinery/refinerycms-blog
   revision: fcb0ed25271ff3cd173e12a751dc3fc2a903d03f
   branch: master
@@ -93,13 +106,6 @@ GEM
     debug_inspector (0.0.2)
     decorators (2.0.4)
       railties (>= 4.0.0, < 6)
-    devise (3.5.10)
-      bcrypt (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      responders
-      thread_safe (~> 0.1)
-      warden (~> 1.2.3)
     diffy (3.1.0)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
@@ -361,6 +367,7 @@ DEPENDENCIES
   byebug
   cloudinary
   coffee-rails (~> 4.1.0)
+  devise!
   dotenv-rails
   dragonfly-s3_data_store
   fancybox2-rails
