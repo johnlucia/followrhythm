@@ -121,7 +121,7 @@ GEM
       dragonfly (~> 1.0)
       fog-aws
     erubis (2.7.0)
-    excon (0.54.0)
+    excon (0.71.1)
     execjs (2.7.0)
     fancybox2-rails (0.2.8)
       railties (>= 3.1.0, < 5.0)
